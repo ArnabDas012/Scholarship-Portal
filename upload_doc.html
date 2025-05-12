@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload Documents</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-600 min-h-screen flex">
+  <!-- Sidebar -->
+  <div class="w-64 bg-white min-h-screen p-4">
+    <h2 class="text-lg font-semibold mb-6 text-slate-700">Upload Documents</h2>
+    <nav class="space-y-2">
+      <a id="profileBtn" href="#" class="block px-3 py-2 rounded bg-blue-100 text-blue-700">Profile</a>
+      <a id="applicationBtn" href="#" class="block px-3 py-2 rounded hover:bg-gray-100">Application</a>
+      <a id="notificationsBtn" href="#" class="block px-3 py-2 rounded hover:bg-gray-100">Notifications</a>
+      <a id="supportBtn" href="#" class="block px-3 py-2 rounded hover:bg-gray-100">Help and Support</a>
+    </nav>
+  </div>
+
+  <!-- JavaScript for Navigation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('profileBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = 'student_dashboard.html';
+        });
+
+        document.getElementById('applicationBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = 'personal_details.html';
+        });
+
+        document.getElementById('notificationsBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = 'notification.html';
+        });
+
+        document.getElementById('supportBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = 'support.html';
+        });
+    });
+  </script>
+
+  <!-- Main content -->
+  <main class="flex-1 bg-white p-10 shadow-md">
+    <h2 class="text-xl font-semibold text-gray-800 mb-1">Upload Documents</h2>
+    <p class="text-sm text-gray-500 mb-8">Efficiently Manage, Monitor, and Optimize Land Resources with Interactive Tools and Insights</p>
+    
+    <form class="space-y-4">
+      <div class="grid grid-cols-2 gap-4 items-center">
+        <label>Previous Scholarship Details</label>
+        <input type="file" class="file:bg-gray-300 file:text-gray-700 file:border-none file:px-4 file:py-1 file:rounded-md bg-gray-100 w-full" />
+
+        <label>Aadhar Card</label>
+        <input type="file" class="file:bg-gray-300 file:text-gray-700 file:border-none file:px-4 file:py-1 file:rounded-md bg-gray-100 w-full" />
+
+        <label>Ration Card</label>
+        <div class="flex gap-2">
+          <select class="border border-gray-300 rounded px-2 py-1 text-sm">
+            <option>Card Type</option>
+            <option>APL</option>
+            <option>BPL</option>
+          </select>
+          <input type="file" class="file:bg-gray-300 file:text-gray-700 file:border-none file:px-4 file:py-1 file:rounded-md bg-gray-100 w-full" />
+        </div>
+
+        <label>Recent Mark sheet</label>
+        <input type="file" class="file:bg-gray-300 file:text-gray-700 file:border-none file:px-4 file:py-1 file:rounded-md bg-gray-100 w-full" />
+
+        <label>Caste Certificate</label>
+        <input type="file" class="file:bg-gray-300 file:text-gray-700 file:border-none file:px-4 file:py-1 file:rounded-md bg-gray-100 w-full" />
+
+        <label>Family Income Certificate</label>
+        <input type="file" class="file:bg-gray-300 file:text-gray-700 file:border-none file:px-4 file:py-1 file:rounded-md bg-gray-100 w-full" />
+
+        <label>Add Bank Details</label>
+        <input type="file" class="file:bg-gray-300 file:text-gray-700 file:border-none file:px-4 file:py-1 file:rounded-md bg-gray-100 w-full" />
+      </div>
+
+      <!-- Buttons -->
+      <div class="mt-8 flex justify-center gap-4">
+        <button type="button" id="backBtn" class="bg-red-500 text-white px-4 py-2 rounded">Back</button>
+            <button type="submit" id="nextBtn" class="bg-blue-500 text-white px-4 py-2 rounded">Next</button>       
+            <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('backBtn').addEventListener('click', function () {
+      // Example: Go to previous page
+            window.location.href = 'bank_details.html';
+         });
+
+          document.getElementById('nextBtn').addEventListener('click', function (event) {
+          event.preventDefault(); // prevent form submission if inside a form
+
+      // Example: Go to next page
+          window.location.href = 'review_submit.html';
+
+      // Or: you can run validation logic before navigating
+      // if (formIsValid()) {
+      //   window.location.href = 'next_page.html';
+      // }
+    });
+  });
+</script>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

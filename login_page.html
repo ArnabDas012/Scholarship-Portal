@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-100 h-screen">
+  <div class="flex h-full">
+    
+    <!-- Left Panel: Login -->
+    <div class="w-1/2 relative flex items-center justify-center bg-cover bg-center" style="background-image: url('C:\Users\Arnab Das\OneDrive\Pictures\kotak\scholarship5.jpg');">
+      <div class="absolute top-4 left-4 text-white text-xl">
+        <button id="backArrowBtn" class="bg-white bg-opacity-40 rounded-full p-2 hover:bg-opacity-60">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('backArrowBtn').addEventListener('click', function () {
+              window.location.href = 'home_page.html'; // Replace with your actual destination page
+            });
+          });
+        </script>
+        
+      </div>
+      <div class="bg-white bg-opacity-90 p-10 rounded shadow-md w-96 z-10">
+        <h2 class="text-2xl font-bold mb-2">Login</h2>
+        <p class="text-sm mb-6">Welcome back! Please enter your details.</p>
+        <input type="text" placeholder="User ID" class="w-full mb-4 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        <input type="password" placeholder="Password" class="w-full mb-2 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        <div class="flex items-center justify-between mb-4 text-sm text-gray-600">
+          <label class="flex items-center">
+            <input type="checkbox" class="mr-2" />
+            Remember for 30 days
+          </label>
+          <a href="#" class="text-blue-500 hover:underline">Forgot password?</a>
+        </div>
+        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">Log In</button>
+      </div>
+    </div>
+
+    <!-- Right Panel: Testimonial -->
+    <div class="w-1/2 bg-white flex flex-col justify-center items-center p-12">
+      <p class="text-lg mb-4 text-gray-800 max-w-lg">
+        This platform has transformed how we manage scholarship applications. With easy tracking and transparent fund allocation, our staff saves time, and students get the support they deserve.
+      </p>
+      <p class="text-sm text-gray-500 mb-6">– Somraj Majumder<br/>Principal, ABCD School</p>
+      <div class="flex mb-6">
+        <span class="text-yellow-500 text-xl">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <img src="C:\Users\Arnab Das\OneDrive\Pictures\kotak\Scholarship 4.jpg" alt="Illustration" class="w-64"/>
+    </div>
+
+  </div>
+</body>
+</html>

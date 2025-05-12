@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Review & Submit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-600 min-h-screen flex">
+   <!-- Sidebar -->
+<div class="w-64 bg-white min-h-screen p-4">
+    <h2 class="text-lg font-semibold mb-6 text-slate-700">Review And Submit</h2>
+    <nav class="space-y-2">
+      <a id="profileBtn" href="#" class="block px-3 py-2 rounded bg-blue-100 text-blue-700">Profile</a>
+      <a id="applicationBtn" href="#" class="block px-3 py-2 rounded hover:bg-gray-100">Application</a>
+      <a id="notificationsBtn" href="#" class="block px-3 py-2 rounded hover:bg-gray-100">Notifications</a>
+      <a id="supportBtn" href="#" class="block px-3 py-2 rounded hover:bg-gray-100">Help and Support</a>
+    </nav>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('profileBtn').addEventListener('click', () => {
+            window.location.href = 'student_dashboard.html';
+        });
+  
+        document.getElementById('applicationBtn').addEventListener('click', () => {
+            window.location.href = 'personal_details.html';
+        });
+  
+        document.getElementById('notificationsBtn').addEventListener('click', () => {
+            window.location.href = 'notification.html';
+        });
+  
+        document.getElementById('supportBtn').addEventListener('click', () => {
+            window.location.href = 'support.html';
+        });
+    });
+  </script>
+  
+  <!-- Main Content -->
+  <main class="flex-1 bg-white p-10">
+    <h2 class="text-xl font-semibold text-gray-800 mb-1">Review Application</h2>
+    <p class="text-sm text-gray-500 mb-6">Efficiently Manage, Monitor, and Optimize Land Resources with Interactive Tools and Insights</p>
+
+    <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Personal Information -->
+      <input type="text" disabled value="Subyasachi Das" class="bg-gray-100 p-2 rounded border" placeholder="Full Name" />
+      <input type="text" disabled value="March 22, 2002" class="bg-gray-100 p-2 rounded border" placeholder="Birth Date" />
+
+      <div class="flex items-center space-x-4">
+        <label class="flex items-center space-x-1">
+          <input type="radio" checked disabled />
+          <span>Male</span>
+        </label>
+        <label class="flex items-center space-x-1">
+          <input type="radio" disabled />
+          <span>Female</span>
+        </label>
+      </div>
+      <input type="text" disabled value="1234567890" class="bg-gray-100 p-2 rounded border" placeholder="Mobile No" />
+      <input type="email" disabled value="test@email.com" class="bg-gray-100 p-2 rounded border" placeholder="Email" />
+      <textarea disabled class="bg-gray-100 p-2 rounded border h-16">Gakulnagar, Udaipur, 799014</textarea>
+
+      <!-- Education -->
+      <input type="text" disabled value="799014" class="bg-gray-100 p-2 rounded border" placeholder="Zip Code" />
+      <input type="text" disabled value="9876543210" class="bg-gray-100 p-2 rounded border" placeholder="Student ID" />
+      <input type="text" disabled value="Jawarnarl Nehru Das" class="bg-gray-100 p-2 rounded border" placeholder="Guardian Name" />
+      <input type="text" disabled value="Balaram Paul Das" class="bg-gray-100 p-2 rounded border" placeholder="Father's Occupation" />
+      <input type="text" disabled value="Rekha Paul Das" class="bg-gray-100 p-2 rounded border" placeholder="Mother's Name" />
+
+      <select disabled class="bg-gray-100 p-2 rounded border">
+        <option>Previous Scholarship: No</option>
+      </select>
+      <select disabled class="bg-gray-100 p-2 rounded border">
+        <option>School Name: Modern English Medium School</option>
+      </select>
+      <select disabled class="bg-gray-100 p-2 rounded border">
+        <option>Scholarship Type: Centrally Sponsored</option>
+      </select>
+      <input type="email" disabled value="subyasachidas2002@gmail.com" class="bg-gray-100 p-2 rounded border" />
+      <textarea disabled class="bg-gray-100 p-2 rounded border h-16">Gakulnagar, Udaipur, 799015</textarea>
+
+      <!-- Bank -->
+      <input type="text" disabled value="799015" class="bg-gray-100 p-2 rounded border" placeholder="Zip Code" />
+      <select disabled class="bg-gray-100 p-2 rounded border">
+        <option>Previous Scholarship: No</option>
+      </select>
+      <select disabled class="bg-gray-100 p-2 rounded border">
+        <option>Bank: School Name</option>
+      </select>
+      <select disabled class="bg-gray-100 p-2 rounded border">
+        <option>Account Type: CMN</option>
+      </select>
+      <select disabled class="bg-gray-100 p-2 rounded border">
+        <option>IFSC Code: Branch Type</option>
+      </select>
+      <input type="email" disabled value="Email" class="bg-gray-100 p-2 rounded border" />
+      <textarea disabled class="bg-gray-100 p-2 rounded border h-16">Address</textarea>
+
+      <!-- Documents -->
+      <div class="col-span-2">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="flex items-center justify-between">
+            <span>Previous Scholarship Details</span>
+            <button disabled class="bg-gray-300 px-4 py-1 rounded text-sm">UPLOAD</button>
+          </div>
+          <div class="flex items-center justify-between">
+            <span>Aadhar Card</span>
+            <button disabled class="bg-gray-300 px-4 py-1 rounded text-sm">UPLOAD</button>
+          </div>
+          <div class="flex items-center justify-between">
+            <span>Ration Card</span>
+            <div class="flex gap-2">
+              <select disabled class="bg-gray-100 p-1 rounded text-sm">
+                <option>APL</option>
+                <option>BPL</option>
+              </select>
+              <button disabled class="bg-gray-300 px-4 py-1 rounded text-sm">UPLOAD</button>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <span>Recent Marksheet</span>
+            <button disabled class="bg-gray-300 px-4 py-1 rounded text-sm">UPLOAD</button>
+          </div>
+          <div class="flex items-center justify-between">
+            <span>Caste Certificate</span>
+            <button disabled class="bg-gray-300 px-4 py-1 rounded text-sm">UPLOAD</button>
+          </div>
+          <div class="flex items-center justify-between">
+            <span>Family Income Certificate</span>
+            <button disabled class="bg-gray-300 px-4 py-1 rounded text-sm">UPLOAD</button>
+          </div>
+          <div class="flex items-center justify-between">
+            <span>Add Bank Details</span>
+            <button disabled class="bg-gray-300 px-4 py-1 rounded text-sm">UPLOAD</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!-- Navigation Buttons -->
+    <div class="mt-8 flex justify-center gap-4">
+      <button type="button" id="backBtn" class="bg-red-500 text-white px-4 py-2 rounded">Back</button>
+            <button type="submit" id="subBtn" class="bg-blue-500 text-white px-4 py-2 rounded">Submit</button>       
+            <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('backBtn').addEventListener('click', function () {
+      // Example: Go to previous page
+            window.location.href = 'upload_doc.html';
+         });
+
+          document.getElementById('subBtn').addEventListener('click', function (event) {
+          event.preventDefault(); // prevent form submission if inside a form
+
+      // Example: Go to next page
+          window.location.href = 'scholarships.html';
+
+      // Or: you can run validation logic before navigating
+      // if (formIsValid()) {
+      //   window.location.href = 'next_page.html';
+      // }
+    });
+  });
+</script>
+    </div>
+  </main>
+</body>
+</html>

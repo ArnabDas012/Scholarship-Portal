@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Scholarship</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-700 text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-800 flex justify-between items-center p-4 shadow-md">
+    <button class="bg-white text-black px-4 py-2 rounded shadow">Student Scholarship</button>
+    <div class="flex items-center space-x-2">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo" class="w-6 h-6" />
+      <button id="loginBtn" class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-2 rounded shadow">
+        Login
+      </button>
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          document.getElementById('loginBtn').addEventListener('click', function () {
+            window.location.href = 'login_page.html'; // Replace with your actual login page URL
+          });
+        });
+      </script>
+      
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center py-12" style="background-image: url('https://i.imgur.com/LdKYOX5.jpg');">
+    <div class="bg-black bg-opacity-50 py-12">
+      <h1 class="text-center text-3xl md:text-4xl font-semibold mb-2">Let’s Trigger Your Career with</h1>
+      <h2 class="text-center text-3xl md:text-4xl font-semibold mb-6">Our Scholarship Program</h2>
+
+      <!-- Cards -->
+      <div class="flex justify-center gap-6 flex-wrap px-4">
+        <!-- Card 1 -->
+        <div class="bg-white text-black rounded shadow-lg overflow-hidden w-64">
+          <img src="https://i.imgur.com/sS1wXxJ.jpg" alt="SC Scholarships" class="w-full h-40 object-cover"/>
+          <div class="p-4 text-center font-semibold">Schedule Cast Scholarships</div>
+          <div class="p-2 text-center">
+            <a href="registration.html">
+              <button class="bg-gray-200 text-black px-6 py-1 rounded-full">Register</button>
+            </a>
+            
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white text-black rounded shadow-lg overflow-hidden w-64">
+          <img src="C:\Users\Arnab Das\OneDrive\Pictures\kotak\scholarship5.jpg" alt="Sports Quota" class="w-full h-40 object-cover"/>
+          <div class="p-4 text-center font-semibold">Sports Quota Scholarships</div>
+          <div class="p-2 text-center">
+            <a href="registration.html">
+              <button class="bg-gray-200 text-black px-6 py-1 rounded-full">Register</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white text-black rounded shadow-lg overflow-hidden w-64">
+          <img src="https://i.imgur.com/gWECbX7.jpg" alt="Academic Scholarships" class="w-full h-40 object-cover"/>
+          <div class="p-4 text-center font-semibold">Academic Scholarships</div>
+          <div class="p-2 text-center">
+            <a href="registration.html">
+              <button class="bg-gray-200 text-black px-6 py-1 rounded-full">Register</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 p-8">
+    <div class="flex flex-wrap justify-between text-sm">
+      <div class="mb-4 max-w-xs">
+        <p>Pandit, Nehru Complex, Gorkhabasti, P.O, Kunjaban, Agartala, Tripura 799006</p>
+        <p class="text-white mt-2">India</p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white mb-1">EXPLORE</h4>
+        <ul>
+          <li>Scholarships</li>
+          <li>Programs</li>
+          <li>Events</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white mb-1">KNOW MORE</h4>
+        <ul>
+          <li>EAPs</li>
+          <li>Latest Updates</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white mb-1">LEGAL</h4>
+        <ul>
+          <li>About Us</li>
+          <li>Terms of Service</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-6 text-center text-sm text-gray-500">
+      Copyright 2025 | All Rights Reserved
+      <span class="block mt-1">Powered by <strong class="text-white">xLayer Technologies</strong></span>
+    </div>
+  </footer>
+
+</body>
+</html>

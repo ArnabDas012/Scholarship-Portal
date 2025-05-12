@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="w-1/4 bg-gray-800 text-white p-6">
+            <h2 class="text-xl font-semibold mb-6">Student Dashboard</h2>
+            <ul>
+                <li id="profileBtn" class="p-3 rounded-lg bg-gray-700 mb-2 cursor-pointer">Profile</li>
+                <li id="applicationBtn" class="p-3 rounded-lg hover:bg-gray-700 mb-2 cursor-pointer">Application</li>
+                <li id="notificationsBtn" class="p-3 rounded-lg hover:bg-gray-700 mb-2 cursor-pointer">Notifications</li>
+                <li id="supportBtn" class="p-3 rounded-lg hover:bg-gray-700 cursor-pointer">Help and Support</li>
+            </ul>
+        </div>
+
+        <!-- JavaScript for Navigation -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('profileBtn').addEventListener('click', () => {
+                    window.location.href = 'student_dashboard.html';
+                });
+
+                document.getElementById('applicationBtn').addEventListener('click', () => {
+                    window.location.href = 'personal_details.html';
+                });
+
+                document.getElementById('notificationsBtn').addEventListener('click', () => {
+                    window.location.href = 'notification.html';
+                });
+
+                document.getElementById('supportBtn').addEventListener('click', () => {
+                    window.location.href = 'support.html';
+                });
+            });
+        </script>
+
+        <!-- Main Content -->
+        <div class="w-3/4 p-6">
+            <!-- Profile Section -->
+            <div class="bg-white p-10 rounded-lg shadow-lg flex items-center space-x-8">
+                <div class="flex-shrink-0">
+                    <img src="C:\Users\Arnab Das\OneDrive\Pictures\Demo DTour\school_girl_18.jpg" alt="Profile Picture" class="w-36 h-36 rounded-lg object-cover">
+                </div>
+                <div class="space-y-2">
+                    <p class="text-xl font-semibold text-gray-800">Sabyasachi Das</p>
+                    <div class="grid grid-cols-2 gap-x-4 gap-y-1">
+                        <p class="text-gray-600">Father's Name:</p><p class="text-gray-800">Shantanu Kr. Das</p>
+                        <p class="text-gray-600">Mother's Name:</p><p class="text-gray-800">Rekha Rani Das</p>
+                        <p class="text-gray-600">Guardian Names:</p><p class="text-gray-800">Shantanu Kr. Das</p>
+                        <p class="text-gray-600">Date of Birth:</p><p class="text-gray-800">March 22, 2007</p>
+                        <p class="text-gray-600">Address:</p><p class="text-gray-800">Gokulpur, Udaipur, 799144</p>
+                        <p class="text-gray-600">Gender:</p><p class="text-gray-800">Male</p>
+                        <p class="text-gray-600">School:</p><p class="text-gray-800">Matabari English Medium School</p>
+                    </div>
+                </div>
+                <div class="mt-8 p-6 bg-white rounded-lg shadow-md">
+                    <div class="flex justify-center">
+                        <canvas id="pendingPieChart" class="w-64 h-64"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chart Script -->
+            <script>
+                const ctx = document.getElementById('pendingPieChart').getContext('2d');
+                const pendingPercentage = 30;
+                const completedPercentage = 100 - pendingPercentage;
+
+                const pendingPieChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Pending', 'Completed'],
+                        datasets: [{
+                            label: 'Pending Status',
+                            data: [pendingPercentage, completedPercentage],
+                            backgroundColor: ['#FFC107', '#4CAF50'],
+                            borderWidth: 1,
+                        }],
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                            },
+                        },
+                    },
+                });
+            </script>
+
+            <!-- Application Status -->
+            <h3 class="text-lg font-semibold mt-10 mb-2">Track Application Status</h3>
+            <table class="min-w-full bg-white rounded-lg shadow-md">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="py-3 px-4 text-left font-semibold text-gray-700">Applicant ID</th>
+                        <th class="py-3 px-4 text-left font-semibold text-gray-700">Applicant Name</th>
+                        <th class="py-3 px-4 text-left font-semibold text-gray-700">Scholarship Type</th>
+                        <th class="py-3 px-4 text-left font-semibold text-gray-700">Submission Date</th>
+                        <th class="py-3 px-4 text-left font-semibold text-gray-700">Class</th>
+                        <th class="py-3 px-4 text-left font-semibold text-gray-700">Status</th>
+                        <th class="py-3 px-4 text-left font-semibold text-gray-700">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="hover:bg-gray-100">
+                        <td class="py-3 px-4">AXU00F1</td>
+                        <td class="py-3 px-4">Sabyasachi Das</td>
+                        <td class="py-3 px-4">Sport Quota</td>
+                        <td class="py-3 px-4">02-05-2023</td>
+                        <td class="py-3 px-4">10</td>
+                        <td class="py-3 px-4 text-blue-600">Pending</td>
+                        <td class="py-3 px-4 flex items-center space-x-2">
+                            <button class="text-green-600">📥</button>
+                            <button class="text-gray-600">👁️</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
